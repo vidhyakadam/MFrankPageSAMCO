@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---css file link-->
+    <link rel="stylesheet" href="style.css">
+    <!----Bootstrap link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!----fontawosam link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title></title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <main class="main">
+            <nav class="navbar navbar-expand-lg pt-4">
+                <div class="container-fluid">
+
+                    <a class="navbar-brand" href="index.html">
+                        <div class="d-flex">
+                            <img src="https://cdn.rankmf.com/images/new-design/logo.png" alt="Rank MF"
+                                class="responsive-img">
+                        </div>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <a class="navbar-brand" href="#"><img src="" alt="cookpal logo" width="96" height="46"></a>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body nav-body">
+                            <ul class="navbar-nav gap-3 justify-content-end flex-grow-1 pe-5">
+                                <li class="nav-item">
+                                    <a id="active" class="nav-link fw-semibold" aria-current="page"
+                                        href="index.html">Explore All MF Rank</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-semibold" href="#">Baskets</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-semibold" href="#">My Investment</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-semibold" href="#">Evaluate Portfolio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-semibold" href="#">NFO</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-semibold" href="#"><i
+                                            class="fa-solid fa-user"></i>DA504605</a>
+                                </li>
+                            </ul>
+                            <button class="equity1 equitybtn">English</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </main>
+
+
+        <div class="container-fluid">
+            <div class="d-flex">
+              <!----sidebar here-->
+              <div class="toggle-btn" onclick="toggleSidebar()">&#9776;</div>
+
+                <div class="sidebar">
+                    <div class="filter mb-4">
+                        <h3 class="fw-bold">Filter</h3>
+                    </div>
+                    <div class="rating-filter">
+                        <h5 class="fw-semibold mb-3">Asset Class</h5>
+                        <div class="filter-box">
+                            <div class="form-check mb-2 numberdiv">
+                                <button class="equity1 equitybtn  assetbtn">Equity</button>
+                                <button class="equity1 equitybtn  assetbtn">Debit</button>
+                                <button class="equity1 equitybtn  assetbtn">Commodity</button>
+                            </div>
+                            <div class="form-check">
+                                <button class="equity1 equitybtn assetbtn">Hybrid</button>
+                                <button class="equity1 equitybtn assetbtn">Other</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rating-filter">
+                        <h5 class="fw-semibold mb-3">Popular Filter</h5>
+                        <div class="filter-box">
+                            <div class="form-check mb-2">
+                                <button class="equity1 equitybtn popularbtn">ELSS</button>
+                                <button class="equity1 equitybtn popularbtn">Multicap Equity</button>
+                                <button class="equity1 equitybtn popularbtn">Hybrid</button>
+                            </div>
+                            <div class="form-check">
+                                <button class="equity1 equitybtn popularbtn">Liquid</button>
+                                <button class="equity1 equitybtn popularbtn">Short Term Debit</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="rating-filter ">
+                        <h5 class="fw-semibold mb-3">Rating Filter</h5>
+                        <div class="filter-box">
+                            <div class="form-check mb-2">
+                                <button class="equity1 equitybtn ratingstarbtn ">5 Star</button>
+                                <button class="equity1 equitybtn ratingstarbtn ">4 Star</button>
+                                <button class="equity1 equitybtn ratingstarbtn ">3 Star</button>
+                            </div>
+                            <div class="form-check">
+                                <button class="equity1 equitybtn ratingstarbtn ">2 Star</button>
+                                <button class="equity1 equitybtn ratingstarbtn">Belo 2 Star</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="rating-filter">
+                        <h5 class="fw-semibold mb-3">Minimun Investment Rate</h5>
+                        <div class="filter-box">
+                            <div class="form-check mb-2">
+                                <button class="equity1 equitybtn rate">Less Than <i
+                                        class="fa-solid fa-indian-rupee-sign"></i>500</button>
+                                <button class="equity1 equitybtn rate">Less Than <i
+                                        class="fa-solid fa-indian-rupee-sign"></i>5000</button>
+                            </div>
+                            <div class="form-check">
+                                <button class="equity1 equitybtn rate">Greater than <i
+                                        class="fa-solid fa-indian-rupee-sign"></i>5000</button>
+                            </div>
+
+                            <div class="form-check">
+                                <button class="equity1 equitybtn popularbtn ">SmartSip</button>
+
+                            </div>
+
+                            <div class="form-check">
+                                <button class="equity1 equitybtn popularbtn ">Fund House</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+
+
+                <div class="searchbox-and-table">
+                    <!--marque tag-->
+
+                    <div class="container marque" style="background-color: transparent;">
+                        <h1 class="heading">Samco Dikhaye aap hi ke tajurbe ka Andekha Sach</h1>
+                        </h1>
+                        <marquee width="50%" direction="left" height="150px">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkO8Ulnubix-89K_OjdADv7y7X8eo_Dnaitw&usqp=CAU"
+                                alt="">
+                            <img src="data:image/png;base64,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"
+                                alt="">
+                            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSExMWFhUXFx0aGRgWGBoXHhcXFxcXHRYXGRcYHiggGB4mHRkdITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0lICUtLi0tLS0vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKwBJQMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAQQFBgcDAgj/xABKEAACAAQDAwYKBgcHBAMAAAABAgADBBEFEiEGMVEHE0FhcZIUFiIycoGRobHhNFJUlNLTI0KCorLB0RUXJDNic5M1Q1ODwvDy/8QAGgEAAgMBAQAAAAAAAAAAAAAAAAIBAwUEBv/EADYRAAEDAQQHBgUFAQEBAAAAAAEAAhEDBBIhMQUUQVFhcaETIoGRwdEVMlJTsSMzQuHw8YJi/9oADAMBAAIRAxEAPwDvBBCx5Fe+SQRJ4dgdRP1RDl+s3kj1E7/VEkNiqjjL7x/pF7LPVeJa0rnfbKDDdc8AqtQRZfEqo4y+8f6QeJNRxl94/hhtUr/QUmv2b7g/3gq1BFl8SajjL7x/DB4k1HGX3j+GDVK/0FGv2b7gVagiy+JNRxl94/hg8SajjL7x/DBqlf6CjX7N9wKtQRZfEmo4y+8fwweJNRxl94/hg1Sv9BRr9m+4FWoIsviTUcZfeP4YPEmo4y+8fwwapX+go1+zfcCrUEWXxJqOMvvH8MHiTUcZfeP4YNUr/QUa/ZvuBVqCLL4k1HGX3j+GDxJqOMvvH8MGqV/oKNfs33Aq1BFl8SajjL7x/DB4k1HGX3j+GDVK/wBBRr9m+4FWoIsviTUcZfeP4YPEmo4y+8fwwapX+go1+zfcCrUEWXxJqOMvvH8MHiTUcZfeP4YNUr/QUa/ZvuBVqCLL4k1HGX3j+GDxJqOMvvH8MGqV/oKNfs33Aq1BFl8SajjL7x/DB4k1HGX3j+GDVK/0FGv2b7gVagiy+JNRxl94/hg8SajjL7x/DBqlf6CjX7N9wKtQRZfEmo4y+8fwweJNRxl94/hg1Ov9BRr9m+4FWoIsviTUcZfeP4Y5z9j6pRcBG6lbX3gRGq1vpKNfsx/mFXoI6zpLIxV1KsN4IsffHOKIjArqDgcQkgggiFKIsmyGBiexmzBeWhsB9Zt+vUNPbFbjUNkZIWklW6QWPaxJ/nHdYKTalXvZDFZmlLQ6lQ7uBJjwUsgtoBaPcLBHoF5RJBBFf2r2mlUUu7eVMbzEHSeJPQOuIJAElMxjnuDWiSVOs4AuSAB0nSG8mulOcqzZbHgGBPsBjK8CFRi9Q3hE1hKlgMyoco8okKqr12OpudOuIjbWlkU9XzdLdQgGazE5ZlzezXuDa3rio1O7ejBaLNHg1OyLu9E4CQOZW63hYrWwOMNVUau5u6MZbHiVtYnrKkHtidqqyXKGaY6oL2uxCi+ulz06H2RaDOSz6jDTeWOzBhOIIZU2K08xsqTpbMehXUn2Aw8vE5JJlLBDafWypfnzET0mC/EwlPiEmYbJNRzwV1b4GBRKdQQCI+bjVMpKtPlBgbEGYoII6CCYIQTGakII5U89Zih0YMp3FSCD2ER6ZwBc6DiYFMr3BDE4xTXtz8q/DnF/rDuXNDC6kEcQbj2wKJXuCG9VVy5QzTHVFva7MFF+FzHGnxenmMFSdLdjuCupJtv0BghEp9BBCwKUkELBAhJBCwQISQQsECEkELBAhJBCwQIUBtVg4nyiwH6RBdTx4qeoxmsbORGNzx5TekfjGLpOmA5rxtXodCVXFrmE5RHiucEEEZa3Usars19Fk+gIyqNV2a+iyfQEaei/3HcvVYmmv2m8/RSkEEEba84mOK1yyJbTG3Ae09AjEZi1OJ1TFFLs3qCJ0En9Uf8A3WL3ynVpymWDoEue1jb4fGM7wrG6mQvNyJnN5mBJUC7HQAFiL26usxwmoKlQg5DD39IW/o+zuZR7RsXnb9g/3or+NjJdHSzprVE1ZolMWaW2RdATlt+trpqb69EZaY1nlUxAy6SXJv5U1hf0UALe+3tigbK4C9XOVLeRfyj1dP8A964auQ04K2wPe6k6rVOc+Qw8itQ5MaEyqFS2hmO0z1GwX3KIqfLhiIvT0w65pHqKp8WjU6eSEVUUWVQAB1AWj5+5SMR5/EZ7A3CES17EGv7xaNOw0++J2BeW0jXv3nfUVYeRbDwZ8+oOgloFB63N29ir7447b8os6c7SqRzLkgkZ10aZ1hv1V4W1PuhxSk0mzzuNHqnIvuOV2K+9F98VXYOgWfiFPLYXXOWI4iWrMB6yBHaA1zn1HYxgPBcBJa1tMbcT4qcwLkwqqpBOmzFk5/KGdS7m+t2GmW/WbxW9odnZ1FUGSwzMoDK8sNYg3sRpdT/SPpYGIibtLRKxVqunVlNiDNQEEbwQToY5m2x85SNy6H2NkZwd6rHJtj056Ca9SWPMFvLcG5RUzak77br9UYtUzWnTGe13mOW7Wdr29pjceUrG5a4Y7S3V1nkS1ZSCGDE5rEaHyVaMp2Aw3n8Qp0tdVbnG9GX5XvIA9cX2YgNfUIj/AJ7qmuJcynMrVcaxyXg9DIkqA00S1SWm65UDM7cBf2k2jL6dcQxieULmYd5zErLljo8kCw6t5MdOUzEjPxCdrpKPNKOATzv3iY0rkiw9ZVAswedNZnY9QOVR6gu7iTCx2FK//I+qae2q9nPdHoqNj/JfOpqdp4nJMyC7IqFTbpym5v2WEQ+xWJVNLVSubEwI8xVdLNlZWYKbjdcA6Hqjfq7EZMhQ86aktSbBpjBATqbAsd9gfZDejx6lnNklVMmYx3KkxGNhvNgbxWLU4tIeJVhsrA6WmFnXLhiH0emB+tMb3Kn/AM/dDLkSw3NUTqgj/LQID1ubn3L74r/KViHP4jOIN1QiWv7Asf3s0ahyR4dzWHq5Gs52merRV9y39cWP/TswG0+uKqZ+paSd3orsIWCCM9aKIIIIEIggggQiCCCBCIIIIEIggggQkjG6jzm9I/GNkjG6jzm9I/GMnSmTeZ/C3dCZv5D1XKCCCMdehSxquzX0WT6AjKo1XZr6LJ9ARp6L+d3L1WJpr9pvP0UpBBBG2vOLPNuKbNOdW3Og9lrfERUtmNmZr1klSAZauHZgR5qG+oOupAHrjXsWwmXUCz3BG5hvHyjlguCJT3IJZj0m27gLRmNs1ZtoLhF0mSthmkWts1wfMBHSJVT27wZ6qrkrqQqaKOklvKN+gaCLRs5giUssAAZjvt0f6R1RNQWjrFAdoajjJ2bh/fFcD7U91FtIYAdUzxWuWRJmTm3S0Zj+yCY+YUZprgXzTJje13b+ZPvj6pKg7xHjmE+qvsEaFCv2U4TKzq9DtYxiFWdp9l+fw4UkuwaWq830DNLGg6gd1+uMR5uqw+esxkeTNltcFhpfpF9zAgkaHUEx9MWjyUB3gQUrQaYIIkFFWzh5BBgrD6nlSr5yc3LWWrEWzS1Zm7VBJAPqhrsxsBV1bhpyNJk3uzvoza6hVOpJ4nTtjeVlKNwA7BHu0PrV0EU2xKTVbxl7pWM8slTLlmlopdlSUmbKOgHyU9wb2x35D6DNMqKgjRVWWp62uz+4L3o1x5SnUqD2iFRANwA7ITt/0uzA8U/Yfq35WKcpex09KmZVSpbTJU052yDMUc+cCo1sTrfrN7REbM7e1VBLMhQjoCSFmA3QneAQQbX1t1mPoWORkqd6j2CGFpF269spXWY37zHQvn7FK/EcXmL+jdwPMSWpCLfebnS/WTGhbIbMDCqedWVBBnCUzG2olooLFQekmwueoDt0MQhUHeIh9pLm3AIG5TTs4a68TJXyxmadM0N5kx+O93b+pj6dwqjEmTLkruloqDsVQP5R3Elfqj2COsRXr9rGEQpoUOzkzMogggjnXQiCCCBCIIIIEIghMwjxzgva4vvt0242gQukEEECEQQQQISRjdR5zekfjGyRjdR5zekfjGTpTJvM/hbuhM3+HquUEEEY69CljVdmvosn0BGVRquzX0WT6AjT0X87uXqsTTX7TefopSEJhY8mNtecVdxDbKkku0uY7B1NiAhNjp0jTpEcpO3dCxA50jrZSB6zawEUurkq2NFWAKmaLgi4PkjeItO3OCUy0cx1lIjJYqVUA3uBbTfcaRzh7yCcMOa3H2Ox03Uab781GtMgtwnDK7OfFS2L7VUtMyrNZvLXMpVcwK8biGI5QaAm2d+4YyeqqHdJStqEDKPRzXt6iTGyV2C0jU7F5UsDm7lsoBHk779EKyq95MQE9rsFlsbWCqHOLpBLSAMDEwQfzvXSr2mppclZxe8tzlDIC2tiSLDUbof4biCT5SzUJKMLgkW6tx3RhSTJng7L+pzqN+0Uce8AeyNg2D+gSPRP8RhqVYvdHBV6R0WyyUbwJJvR4RIw371KYpiMunlNOmEhF3kAneQBoO2IL+8Ch/8AI/8AxtHblB+gT+wfxLEHya4bJm0rGZJRzzhF2UNplXiIZ7nX7rYVFns1n1R1oqhxhwbDTGY4tKsNFtdRziFWcqsdwfyL9ma14dY1jsilVWnMQGNhZS2oF+jdpFa2v2LktKebToJcxVLZV0VwNSMu4G3SIoFZjbTaZJExixRyVY78lrWJ6bdHbCPrOZg5dlk0XZ7WWvouddmHgxeGBgggR0Wn/wB4FD9d/wDjb+ke/HmjyZ87Zc2TzDvte1uyPOzGH0rUkgvLkljLW5Krcm3TFd5T6WUkuQJSooMxr5ABrkG+0S59RrbxjqqKFnsda0Cg0PGJE3m7J/8AngtDo6pJqLMRgyMLgjpBjhi2KS6aWZs0kICASAWPlEAaDXeYzXYzHnopppai6y2a3lfqMf1vRb+YPGLfykj/AAEz0pf8Yhm1Q5hcqqmjTStbKLjLHEQRtBP5H+wR/eBQfXfuNB/eBQf+R/8AjaDZDCadqOnZpMtmMsEkopJPEkiKXjVJLGNKgRQnOyBlAFrES7jLu6YR1So1odhjzXVZ7JYq1WpTuvFwOPzD+P8A4V0PKBQfXfuNEtguOyKpWaSxYKbG6ldSL7iOER+02D04pJ5WTLVhKcghFBBCmxBtEJyR/wCTP/3R/BDX3ioGmMVzus1mfY316QcC0gYkHPk0K241jMmlQTJzEKTlFgSSTc7hr0R1w3EJc+Ws2WcyNuO7cbG46DcRne2zTK6tWlk6iUh79rsfUMq9pMOeSnFP8ykbT/uID6g4t0a2PrMArTUu7PVM/RgbYu3B74hxG5pwBjPirbie01PTzBJmlg7WsApPnGw1tYaxN3jKeUP/AKjK9GX/ABtGoT5WZSpvqCNNDqOg9EOx5c5w3LmtVlZSo0XtmXgk+cYYBKJykZri3G+ntjlJrpb3CTEYjflYNbtsdIpdVgbyWWRIR6hcpYifMbm0F7KuRcoYmx0PCGQ2fq2nK6U0qkcf9yXMyqB03li4bs0vbWFNRwwuqxlhouBPaxumB5tm9jwBPAjFWyfS0dSFqLgG11mq5Qi27UEajgYgqmvkl5izq6WxA/QzpbBZkonzlbmxZgbA8NDpuiWOzlHIlFjTJMKi5CpmzN05UJIFz0R5wxKOougppItvX9CxXtWWTDG9wXMNVk/MRsyHuu+C4ys1wgnyZo5oZirAMJgtm8jeVO+/RuiwgxVaLAKIVYeSLTJN8wXMVVmWwB1srWJ064ksfxoUqrZGmTHbKktd7Hp9QHxEM0mO8qq3ZB36RMcYB6EqZgjjImZlVrEXANjoRcbj1x2hlUkjG6jzm9I/GNkjG6jzm9I/GMnSmTeZ/C3dCZv8PVcoIIIx16FLGq7NfRZPoCMqjVdmvosn0BGnov53cvVYmmv2m8/RSkJCx5Mba84sdxmTMfFmWSwSYZgyE9BsDf4xP1mymJVACT6pDLvcjX22Ci/rMeDgdR/a4qOabmudzZ9LWyWvvvvjRTHMylM3pzPivQWzSJpCj2N0kU24wCQcszMRu3rH+UDC0p2ppKbll7zvYlnzMesmHe0+y1RIp+c8JmTlFsysWsqnpsXIIBt0RJcouC1FRPlNJlM6iXYkW0OY6amL6ZIaXlYXBWxB4EWIiOxvOcPJM/SjqNCzuaQ44lwwJz24GFj0+dJbDFWWuV0qBznSWJlvle/AjS3Ra0aRsGR4BI9E+0MYoGIbHVMue6JLeZJY71y3yk3XQkXZT8OuJDC5WJ4ddFkidKJJsLsLnpWxzKT0ggwlO810uGyMF025lG00Ozo1ASXXxJAmcweI48lbOUE/4Cd+z/GsR3JUP8I/+6f4ViDxVMTxGyPI5mUDcjVd3Sb+U54AD+sO8NqcSpZYkyKK8tdzTAczE72YK4Fybm3RpFl6al6DELk1e7YjZr7b5dePeEADecpO4K7YzWpJkTZjGwVCdew2EYAJZ3208kX64v8AiGF4riDATVWVLB3XyqOvKCzMe2O+0ex7y6WVJp0aYwctMYWuSUtfeNOgCKqwdUxAiF16KqULDDH1GlzyJg91oAOZGC9YJsDJnU8qc06apdAxAyWBI3C6xH7cYIlHIkIjuwM9mu9r3yLwAHQIk8OxLFZEpJK0SlUUKCb3IA6bPDXaORiFZKl56XKyTTYIDuKDU3bjpDODS3utM8ktGtaBamurVmlgJwvtO+MAprbTZfwqUs2XbnkUf+xQPNPXw7euKSdpGehejmkllKZCd9lmLdG6xb3WjZae+Vb8B8Iz/b3ZBpjeEU6ZmY2mILC518sdfQfbxhqzCBebuXJoq203FtC0nAG80n+JBmORy4K17G/Qqf8A2xFBx7/rq/70j4So0DZWneVSSJbrldUAYHoPDSKfi+CVDYus9ZTGUJkny9LWUS8x330sYmo03WgbwlsFVjbTXLnAAtfHGSMlctq/oVT/ALL/AMJik8n2ILT0VXObcrg9pyDKPWYu+00hplJPRBdmlMFA6SQbCMxk4BX8wacU7qHmhySRYWUBb+VuB19Qgq3hUDgNinRopVLI6jUeBL2zJjAYlGyG0UumebOmo7zZn6y23E3beelvgIYjGEl1/hUlWSXzmYqRY2P+YNOg6kdojY8MoEkyklLuRQvbYb4guUHAmqacGUt5ktrqBbygdGX+fqhHUXhkA5Y5Loo6VstS0uLmEB/dJvYXdmF3AQNhwVS28mBq+Sw3FJZHYWNo1gRjM7AK9uZY07EylCjzdyElc2vXbsEWo7QYv9hT2H8cSx5DnEg48EluswqUaVNlRhuAg95o24bVfYrW08x2vIuFWaCikEZmnMrlAR+qoy3J4leuJ2jdmRS4sxUFhwJGo9sUrbKilGqkc0Dz7MxbmmAfyU8htTZRfpPReOo5LzqutHcol73yi9997dMcSJEi7EJLzWBOgvYaD1CPMmZNSShdc8wKOcyaXNvKKg6HXo0iJxfE5ExdKlJTLvWaXl2HSSoZGv7oEL1g8lUmBkAzTps5yw3vKDvk16Rd1tHaVT87XPNOqyJYROp5nlO3blKj1mCjmhJT1ThrCX5AN7iUguDY65m843/0g7oeYSynOwuGch3RiC0tmRRlNt2i3gQpKCCCJQkjG6jzm9I/GNkjG6jzm9I/GMnSmTeZ/C3dCZv8PVcoIIIx16FLGq7NfRZPoCMqjVdmvosn0BGnov53cvVYmmv2m8/RSkBghCI215xJaFiJq6OrLky6pEQ7lMgOR+1nF/ZHLwCu+2S/u4/MhoG8dfZLJ3Hp7qbgiE8Arvtkv7uPzIPAK77Yn3cfmQXRvHX2RJ3Hp7qahbRCeAV32yX93H5kHgFd9sl/dx+ZBA3jr7Ik7j091NwkQvgFd9sl/dx+ZB4BXfbJf3cfmQXRvHX2RJ3fj3U5Hm0QvgFb9sl/dx+ZB4BXfbJf3cfmQQN46+yJO49PdTkEQfgFb9sl/dx+ZB4BXfbJf3cfmQQN46+yJ4Hp7qbhLRC+AVv2yX93H5kHgFd9sl/dx+ZBA3jr7KJ4Hp7qahYhPAK37ZL+7j8yDwCu+2S/u4/MgujeOvspk7j091NwlohfAK77Yn3cfmQeAVv2yX93H5kEDeOvsiTuPT3U1BEL4BXfbJf3cfmQeAVv2yX93H5kEDeOvsiTuPT3U3BEJ4BXfbE+7j8yDwCt+2S/u4/Mggbx19kXuB6e6m4g6fAglQZwIIMxpmu/M8tU38NCRwvC+AVv2yX93H5kHgFd9sl/dx+ZBdG8dfZEncenupuPDop3gG3EXiH8Arvtkv7uPzIPAK37ZL+7j8yCBvHX2RJ3Hp7rtjMubMySUACOTzrEbpYtdR/qa9uy56I7YZSvLVucYM7OWJUWGuigC19FAFzc9cM/7Prvtkv7uPzIP7Prvtkv7sPzILo3jr7Ik7vx7qcghBCwqZJGN1HnN6R+MbJGN1HnN6R+MZOlMm8z+Fu6Ezf4eq5QQQRjr0KWNV2Z+iSfQEZVGnbIzg1JKt0Aqe1SRGnow/qHl6rF00D2TefopuCEvCxtrzayDbTbHEJNdOkSJgCrYhcimw5sM2pHaYsGym17zMMn1M5g02RzmY2Avpml6bukD1RW8Qkh9osjC6swBHEGnII98U+onTaMVlDrZ2VD/wCp7g2/1LGj2LXtDQMYB6wVn9q5ji4nCSOimJXKDid0zThlc6eQmoDWa2nGNH5Sscn0lJLmyHyuZgBJAOhVidD2Rmu2WGeDPQSOlZCZvTaYzP7yYvvLHLJw9GA0WahPUCCB7yB64V4YXsIGBn8oYXhjwTiPZTXJ7is2qoZc6c2Z2ZwTYDzXYDQdQiq+NlZ/bXgfODmOey5cq+bkva+/fEhyUYvIGHrLaaivLd8wZgpF2LA6ndY74p+FT1qMfE2T5SGezAj6qyyC3Z19YhG0xfqSMgVY55uU4OJIV32llYzz8xqWZJWQACoa19EGf9U/rX6Ypuzm1OM10wy5E+XmC5jnVVFrgbwp4xs1UfIb0T8DGMciB/xcz/Z/+SxFJwNNxIGEbEVWkVWgE48VdsSrq+lwqbNnuvhSG4ZACtjMULpYfqnhHnktx6orJM56hwxWYFBAA0yA9HWYkuUeUXw2pCi5yA+pXUn3AxT+RjFJMuXPlPMVXLhgGIF1ygaX36iFADqLnRjKYktrNbOELrt5tbWU2IpIkzAssrKJGVTqzkNqRwjTpjgAkmwGpjDdvKxKnF5fMMJljJl3XUFw9yARvtm39R4RoPKpjXg9EyKbTJ95a235bfpCP2dP2hDPpyKbRmUMqQXuJwBVExPlAxF3qJtO4FOjgDyFOVWJWWSSLnNa8arsljQrKSVPuMxFnA6Ji6OPbr2GMcwWtMvD51L4BPmeEeVzqoxGgBlFfJNwCAfbEzyNYyZU+ZRvcCZdlB0tNQWZbHcSo/ci2vRFwkCIPmIVNGqQ8Sc+h/4pjlR2rq6OfKSnmBVaWWIKg6hiOkRolE5aWjHeVBPaQLxj/Lgf8TJ/2T/GY1KgxenEqWDPlDyF/wC4v1R1xz1GgUmHmr6bj2rwThgpeGGNTykic6mzLLYg77EKSNIdo4Oo3HceMMdo/os//af+ExQM1ecllWzG0GNV5dZE+UDLALZ1VfOuBaynhGgbJSMSTnfD5ktxZeb5votmzX8kdUZPyc4LUVbThIqmpyqoWK5vLBLWBysN1vfGu7J4JPpUdZ9U1QWYEFs3kgC1vKY9MddqhpLRHKMfNclmvOAcZ5zh5Km7C7XVlTiDSJ0wNLAmWGVR5rWXUC8TvKjjtRR08p6d8rNNykkA6ZGPT1iM/wBhKtKbFm55ggzTUu2gDFtASdBe0WLlnxSS8mTKSYrPzhchSDZQpFzbdqfjDOpjt2gDDBK157B0nHFWWhxme2DmrL/puYZ81h5wzWNt3RGcYdylV6zJbzZgeVnAcZFF1/WAIG8A3i80Esrs/ZhY+CsfUQSPcYpGzWAeGYVVZReZKnc4lukiUMy+sX04gQUwwBxcMJjlKKheS0NOyeat3KdtXUUq0z0swBZqub2DZgAhU6+lE3txi86nw4z5TZZn6PWwPnFb6HTpjEsTxkzqSnkNcmQZgBPSj5So9RBHZaNe5Tf+kH/1fxLA6iGGm0jafHFS2sXh7gdiruzuKY5WyjPkTpRVWK2YKpLAA6eSR0jph3gfKFUy6oUmISlViwTMoylWa2XMASCpuNQemO/JBiEmVQzOcmon6dj5TKumSXrqYpu2dQuIYoBS+WGyS1YfrFfOYdQvv/0xIa173MLQANsZJbzmsa4OMnZK3wQsIIWOBaCSMbqPOb0j8Y2O9oxuebsx6z8YydKZM8Vu6Dzf4eq5wQQRjr0KWLBsljgkMUmH9G53/Vbdfs49kV6FiylUdScHtzVNeg2swsfkf9IWyS3BAIIII3iOsZLh+MT5OkuYQPqnUew7vVEh44VXFe7842GaTpEYggrzz9DVge6QR5K0vsjSmsFcQ/PA3vmOW4XL5u7dDfEthKKfU+FTFfnCysbOQpKZbXX9kXiv+ONX9ZO784PHGq4p3fnFo0qwZE7vBVfBKx2N35qy4/sdS1k1Z04PnUADK5UWBJGnTqYm6mlSYhluoZGFirC4I4G8Z/441fFO784PHGr4p3fnEHSlKADOCkaFr4kAeafz+SrDmNws1R9UTLgdmYE++J3Z/ZWkormRLsx0LsSzEcMx3DqFhFSG2FV9ZO784PG6q4r3fnDHSzHCC5yUaCrDENb5rRnS4IO4i3tivbObF0lDMMyQHDMuU5nLaXB3Hsit+ONXxTufODxxq/rJ3fnCDSlIAgTHJMdC1yQSB5rRmQEEHUGKXXcl+HTGLBHl3/VluQvqU3A7BpEb431f1k7vzg8carind+cS3StNuLSVDtB13fMG+asmAbEUVG3OSpZMzod2Lkdl9F9Qj1tHsdS1zq8/nCVXKoVyoAJudBx09gis+N9X9ZO784PHGr+snd+cHxVk3pdO9HwOvF2GxzWhyJKoqoosqgAAdAAsB7IrTbBUfhPhYExZvOc5dXIGe9ycvX09piB8cKvind+cJ441fFO784G6TpDKd2Sk6FtBzA81Z9o9jqWtdZk8OWVcoyuV0vfo64hzyUYb9Wb/AMhhj44Vf1k7nzg8cavind+cM3TDQO6XQlOgqpxLW+a0OnkhEVF3KAo7ALCPNZTLNRpbXyupU2NtCLHWM+8carind+cHjjV8U7vzhPiVHj5J/g9o4eatOzWyVNQl2kBwXADZmLaLe1r7t8T8Zt441X1k7nzhfHCr+snc+cS7SdJxkyoboW0NwAHmrDj+wtFWPzk2WRMO90YqW9Ibm7SIZYdyZ4dKYNzbzCNQJj3F+JUWB9d4i/HGr+snd+cJ44Vf1k7vzifi7ALsuSHQdU96G+av9dQpOlPJa+R1KmxscpFtD0Qw2b2ckUKMkgNldsxzMW1sBpfqEVDxxqvrJ3fnB441XFO784X4pSiBPkn+C15nu+ak6rkxw6Y7OVmAsSSBMIAJJJsOga7osOM4FJqpHg03Nzfk+a1j5BBGvqileONV9ZO784Xxxq+Kd35wx0tTMYlQNB1hgA3Hin/91OG/Vm/8hiewPZWjo7mRJCsdCxJZiOGZiTbq3RUvHGr4p3fnB441fFO784k6WYRBLioboKsDIa3zWkQsZr45Vf1k7vzjxO2rq2Fs4XrVRf3xX8SpDYVYND2g7vNWrazF1ky2RT+kcWAHQDvYxnMepkwsSzEkneSbk+sx4jKtNpNd97yW7YrG2zMugyTmf9sRBBBHMuxEEEECEsJBBAhELHalpJk0kS0LEC5t0DjFh2cwd0mNMnySESWx8saEi1hr1Xi6lQdUIgYb9i5q1pZSaccRskSovZykWbUy0cXXUkHpAU/zh3U4nSeUoo1vqAcx7AbR6lbUsuq08hTa11Qg69cV8mLO1bTZdpmc5MBUii+rULqoIEAAXtuOOEcM1Ydm3kTGlyGpg7Em8wt2km1uEe8aq6WW8yUlKt1uoe/TbfbqPwj3sQgQzqht0tCB27z7gPbDbZqkE2a1RO/y5d3cncX3gfz9Qi9t802MES4nYMAMFyvFMVqjzN1oG04uOO9TGF4DIWWsqagae8tn1/UGlh7x6wYrGBUPPVEuWRcE3b0V1PwtFwwuopplWZiT3d3BAUqQAoA0Fx0W95hhs7IEl6uc26VmUdoJJ+A9sWvoseaYaBAJ3ZDiOCqZaKjG1S6bxAwMjEk5A7MkqNSNUmmWkUgMVLgnSw1OW2ljpviCrcNBq2kSdRnyjptuv6hr7IsmCYu9Uk9XULZL3l3U3N+m54Qz2aly6eUamc2QzPJQ2LEA6lgNd56eA64h9NtW7ldJJkiIA2f2VLKj7OX4G8AGhsl0uO3+gveOYZTLTTDJUZ5TqrN0k+Tm+MMdkcNSaJ0yYmdUXQcWsSbewe2JWTLkGjqlkzGmaFmLixva/AcI80dUaShlOPOmTAxHFSbn9we+JLGGo2o6IDSTGI3JRUeKLqLSS4vAE4HIE8tqY1NFIpJP6ZFec4uqHVZY6PZ77dUOk2eD08lVQCbMIZnI81POPxAtHPaXDOcqZLrqk/KL8LAX/d/nE22JK1W1IfMMqwtp5epIv6J90Oykwuc1wEYNHGcZ/tI+vUuNfTJLsXu4RhEbhu24yq7UU9O8+VTSEBAYB5nSwHnC/CwteI/aiVKSoZJShVQAadLWufiB6omNk8PMmfPaZukKRft1v3R+9FWqZxdmc72JJ9Zjkrk9lLhBcThGQGEea7rMAa8NcS1rRjJxLsZXhEJIA3kgDtJ0i51uzEsvLRRkRUzTpl/UAL9OhPVEHsjTZ6qWTuW7n9kae+0WWZVeGJVyBvVvIt0hd1+IzKfURD2Sk00yXCSTgN8CeuKr0hXe2oA0wGiSd14xPGFVcT5qbOEumlgC+UHW7nib7h/S8TuJ4NTpTTAgzTZIXO2u82J6bbo4bKUySlarnHIAciEj9Y7zb3eoxIUMqS0mrEueZpdCzXW1iVa3wiyhTDgXOAl07sBjGHFVWmsWODaZN1hAnEySRMngPVQWyeGpOmOZguiLc9p3fA+yJLCZdHVs6LTlMqk5w5NrG3q4+qFwWb4LQvPygtMawDbiL5Rfq84x6qK0zsPmTMollXA/R3UEZlGo6dDEUWNZTaMJguIjMbBOxTaH1H1XkSBeDAb0QRmY2plgeHyBIn1E5M6o1lF7Xt2cSQPVDOuxCldGWXTZXO5s5NvVFjdp9NSyEkyszHVvILgXFzcDcbkeyIynmT6mqky58sJlOewQpoutyCddRb1xD2XQ2k3OB/Gc+Pimp1L7n1nfKCSO8RAaPpGc+qXFcGloaWQq/pJhGdrm9tL/AMz6oNq8KkpLWZJWwEwo+/eB19Yt64kqaaJtfOnHzJCWB6wP/wBeyGOCk1dPPknzjMEwftNc/wAJ9sO+mxwc0Ad6QP8AyPUhV06r2lr3OMNul2P1knoCEwxWhlSqOQ2X9LM8otc+ba+7duIEecdopcmTIUKBNZc7m53W+fuh1tOedq0kqCwlgLlUXPF7Ds+ERm0daZ1Q7WIA8kA7wF6D67xz1rjb8AYQ0eGZ5yumzB7zTkna8+ODRyUZCQsJHDAWoiCCCBSiCCCBCIIIIEIggggQu1PUvLN0YqT0qSI7vis8ggzXIIsQWOoO+GcJDh7hgCeqrdTY4yQD4BKYIIIROu8urmKhlhyEbeoOh3b/AGQiVbhDLDHITcr0E8Y4wQ1470lxu4Zzlt38+K6SJ7I2ZGKsNxHXvjq2IzSrKZjZXJLC+jE7yYbQQBzgIBUmm0mSBK609XMl3yOVzCxtpccDC1FU7hQ7FgosoJ3DqjjBBeMXZwR2bb16BO+MfNdpFZMQMquQG84A7+2FqK2Y4VXcsF80E7t272COEJBedESY/wAUXGzegT/v+ck8TFJyhQJjAJ5ov5ultPUbRyNU+fnMxz3vmvrfjHGCAvccyoFJgyA8k8fFJxDAzGIfztfO0tr6oZwQkDnFxxKljGs+URyTijrZkoky3KkixItqOGsJSVcyU2ZHKsdLjpB3xxhILzthyy4KDTaZkDHPDPgnVVXzZgCu5YA3ANgATvOgEJSVsyVfm3K5hY2tqNePbDaFib7r0yZ3o7Nl27AjdGCcTa2YyLLZyUXzV0sOFtIErZglmUHPNk3K6WJ0PDiIbwkRfdnJR2bAIgZzltUoNoav/wA7/u/0jj/bE/nOd51s+XLm0vl323QxghjWqH+RS6vTb/AeScy6+aodVcgTL57W8q+++kFFXTJJJluUJFja24bt4hvBEX3TM5JjTaZBAxzw/KcS66YswzQ5Ew3u2l9d8N2YkknedT2nfBCRF4kYpmsaMgiCCCFTIggggQiCCCBC/9k="
+                                alt="">
+                            <img src="data:image/jpeg;base64,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"
+                                alt="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn_tT8KpFLHuu8Bc1ze4BOywApdExMuu8w7w&usqp=CAU"
+                                alt="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnQ2Ga5-7rRwSFxXpA6ZNxaBXSxPV5yt4tHA&usqp=CAU"
+                                alt="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZhDbbTVgxETLdqsrkzi3ymZUtPlhs5i-rvQ&usqp=CAU"
+                                alt="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHoM6W-uObEmjguggnxFW_HXDBoghDOEkNHw&usqp=CAU"
+                                alt="">
+                            <img src="data:image/png;base64,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"
+                                alt="">
+                        </marquee>
+                    </div>
+                    <div class="container  searchcontainer"> <!--search box here-->
+                        <section id="search-box">
+                            <h5 class="fw-bold mb-4">Search For Mutual Funds</h5>
+                            <div class="search input-group mb-3 d-flex align-items-center">
+                                <input type="text" id="searchInput" class="form-control p-2"
+                                    placeholder="Search for Funds..." aria-describedby="button-addon2">
+
+                                <button class="btn btn-outline-secondary searchBtn" type="button" id="button-addon2">
+                                    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <section id="box" class=" d-flex my-5">
+                        <!------table for the selecting mutual fund  -->
+                        <div class="container-fluid tbl-container d-flex flex-wrap gap-4" id="table-mf">
+
+                            <div class="row tbl-fixed">
+
+                                <table id="tab" class="table-striped table-condensed">
+                                    <thead>
+                                        <tr class="t-header">
+                                            <th class="fund">Funds</th>
+                                            <th>NAV</th>
+                                            <th>1Y</th>
+                                            <th>3Y</th>
+                                            <th>5Y</th>
+                                            <th>Since Incepetion</th>
+                                            <th>Overall Rank</th>
+                                            <th>Category Rank</th>
+                                            <th>MF Rating</th>
+                                            <th>Fund Sahi h?</th>
+                                            <th>Time to invest</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td>
+                                                <div class="para">
+                                                    <img src="https://cdn.rankmf.com/images/400027.jpg"
+                                                        alt="sbi-focused-equity-fund-regular-growth">
+                                                    <p> Sbi Focused Equity Fund Regular Growth</p>
+                                                </div>
+                                                <div class="btn3">
+                                                    <button class="equity1 equitybtn">Equity</button>
+                                                    <button class="equity1 indexbtn">Flexi Cap Fund</button>
+                                                    <button class="equity1 fundbtn">Focused mix of Companies</button>
+                                                </div>
+                                            </td>
+                                            <td><i class="fa-solid fa-indian-rupee-sign"></i>11.31</td>
+                                            <td>13.75%</td>
+                                            <td>0.00%</td>
+                                            <td>0.00%</td>
+                                            <td>5.33%</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td class="star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td><button class="investbtn">Invest</button>
+                                                <button class="watchlistbtn">+Watchlist</button>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="para">
+                                                    <img src="https://cdn.rankmf.com/images/400035.jpg"
+                                                        alt="edelweiss-nifty-100-quality-30-index-fund-regular-plan-growth">
+                                                    <p>Edelweiss Nifty 100 Quality 30 index Fund plan - Growth </p>
+                                                </div>
+                                                <div class="btn3">
+                                                    <button class="equity1 equitybtn">Equity</button>
+                                                    <button class="equity1 indexbtn">Index Funds-Other</button>
+                                                    <button class="equity1 fundbtn">Index Funds-Other</button>
+                                                </div>
+                                            </td>
+                                            <td><i class="fa-solid fa-indian-rupee-sign"></i>11.31</td>
+                                            <td>13.75%</td>
+                                            <td>0.00%</td>
+                                            <td>0.00%</td>
+                                            <td>5.33%</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td class="star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(152, 173, 192);"></i>
+                                            </td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td><button class="investbtn">Invest</button>
+                                                <button class="watchlistbtn">+Watchlist</button>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="para">
+                                                    <img src="https://cdn.rankmf.com/images/400015.jpg"
+                                                        alt="icici-prudential-fmcg-fund-growth">
+                                                    <p>Icici Prudential Fmcg Fund - Growth</p>
+                                                </div>
+                                                <div class="btn3">
+                                                    <button class="equity1 equitybtn">Equity</button>
+                                                    <button class="equity1 indexbtn">Index Funds-Other</button>
+                                                    <button class="equity1 fundbtn">Index Funds-Other</button>
+                                                </div>
+                                            </td>
+                                            <td><i class="fa-solid fa-indian-rupee-sign"></i>11.31</td>
+                                            <td>13.75%</td>
+                                            <td>0.00%</td>
+                                            <td>0.00%</td>
+                                            <td>5.33%</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td class="star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td><button class="investbtn">Invest</button>
+                                                <button class="watchlistbtn">+Watchlist</button>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="para">
+                                                    <img src="https://cdn.rankmf.com/images/400030.jpg"
+                                                        alt="tata-ethical-fund-regular-plan-growth">
+                                                    <p> Tata Ethical Fund Regular Plan Growth</p>
+                                                    <a href=""><img
+                                                            src="https://cdn.rankmf.com/images/smartsip_explore_all.png"
+                                                            class="smartsip">
+                                                    </a>
+                                                </div>
+                                                <div class="btn3">
+                                                    <button class="equity1 equitybtn">Equity</button>
+                                                    <button class="equity1 indexbtn">Index Funds-Other</button>
+                                                    <button class="equity1 fundbtn">Index Funds-Other</button>
+                                                </div>
+                                            </td>
+                                            <td><i class="fa-solid fa-indian-rupee-sign"></i>11.31</td>
+                                            <td>13.75%</td>
+                                            <td>0.00%</td>
+                                            <td>0.00%</td>
+                                            <td>5.33%</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td class="star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td><button class="investbtn">Invest</button>
+                                                <button class="watchlistbtn">+Watchlist</button>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="para">
+                                                    <img src="https://cdn.rankmf.com/images/400040.jpg"
+                                                        alt="axis-nifty-it-index-fund-regular-plan-growth">
+                                                    <p>Axis Nifty It Index Fund Regular Plan Growth</p>
+                                                </div>
+                                                <div class="btn3">
+                                                    <button class="equity1 equitybtn">Equity</button>
+                                                    <button class="equity1 indexbtn">Index Funds-Other</button>
+                                                    <button class="equity1 fundbtn">Index Funds-Other</button>
+                                                </div>
+                                            </td>
+                                            <td><i class="fa-solid fa-indian-rupee-sign"></i>11.31</td>
+                                            <td>13.75%</td>
+                                            <td>0.00%</td>
+                                            <td>0.00%</td>
+                                            <td>5.33%</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td class="star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td><button class="investbtn">Invest</button>
+                                                <button class="watchlistbtn">+Watchlist</button>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="para">
+                                                    <img src="https://cdn.rankmf.com/images/400058.jpg"
+                                                        alt="nj-elss-tax-saver-scheme-regular-plan-growth">
+                                                    <p> Nj Elss Tax Saver Scheme Regular Plan - Growth</p>
+                                                </div>
+                                                <div class="btn3">
+                                                    <button class="equity1 equitybtn">Equity</button>
+                                                    <button class="equity1 indexbtn">Thematic Fund-other</button>
+                                                    <button class="equity1 fundbtn">Mix of Thematic stocks</button>
+                                                </div>
+                                            </td>
+                                            <td><i class="fa-solid fa-indian-rupee-sign">11.31</i></td>
+                                            <td>13.75%</td>
+                                            <td>0.00%</td>
+                                            <td>0.00%</td>
+                                            <td>5.33%</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td class="star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(152, 173, 192);"></i>
+
+                                            </td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td><button class="investbtn">Invest</button>
+                                                <button class="watchlistbtn">+Watchlist</button>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="para">
+                                                    <img src="https://cdn.rankmf.com/images/400028.jpg"
+                                                        alt="bandhan-nifty100-low-volatility-30-index-fund-regular-plan-growth">
+                                                    <p> Bandhan Nifty100 Low Volatility 30 Index Fund Regular
+                                                        Plan-growth
+                                                    </p>
+                                                </div>
+                                                <div class="btn3">
+                                                    <button class="equity1 equitybtn">Equity</button>
+                                                    <button class="equity1 indexbtn">ElSS</button>
+                                                    <button class="equity1 fundbtn">ElSS-Equity Linkded Scheme</button>
+                                                </div>
+                                            </td>
+                                            <td><i class="fa-solid fa-indian-rupee-sign"></i>11.31</td>
+                                            <td>13.75%</td>
+                                            <td>0.00%</td>
+                                            <td>0.00%</td>
+                                            <td>5.33%</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td class="star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(152, 173, 192);"></i>
+
+                                            </td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td><button class="investbtn">Invest</button>
+                                                <button class="watchlistbtn">+Watchlist</button>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="para">
+                                                    <img src="https://cdn.rankmf.com/images/400035.jpg"
+                                                        alt="edelweiss-nifty-100-quality-30-index-fund-regular-plan-growth">
+                                                    <p>Edelweiss Nifty 100 Quality 30 index Fund plan - Growth </p>
+                                                </div>
+                                                <div class="btn3">
+                                                    <button class="equity1 equitybtn">Equity</button>
+                                                    <button class="equity1 indexbtn">Index Funds-Other</button>
+                                                    <button class="equity1 fundbtn">Index Funds-Other</button>
+                                                </div>
+                                            </td>
+                                            <td><i class="fa-solid fa-indian-rupee-sign"></i>11.31</td>
+                                            <td>13.75%</td>
+                                            <td>0.00%</td>
+                                            <td>0.00%</td>
+                                            <td>5.33%</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td class="star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(152, 173, 192);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(152, 173, 192);"></i>
+
+
+                                            </td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td><button class="investbtn">Invest</button>
+                                                <button class="watchlistbtn">+Watchlist</button>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="para">
+                                                    <img src="https://cdn.rankmf.com/images/400013.jpg"
+                                                        alt="hdfc-top-100-fund-regular-plan-growth">
+                                                    <p> Hdfc Top 100 Fund - Regular Plan - Growth</p>
+                                                </div>
+                                                <div class="btn3">
+                                                    <button class="equity1 equitybtn">Equity</button>
+                                                    <button class="equity1 indexbtn">Index Funds-Other</button>
+                                                    <button class="equity1 fundbtn">Index Funds-Other</button>
+                                                </div>
+                                            </td>
+                                            <td><i class="fa-solid fa-indian-rupee-sign"></i>11.31</td>
+                                            <td>13.75%</td>
+                                            <td>0.00%</td>
+                                            <td>0.00%</td>
+                                            <td>5.33%</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td class="star">
+                                                <i class="fa-solid fa-star"></i>
+
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(152, 173, 192);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(152, 173, 192);"></i>
+
+                                            </td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td><button class="investbtn">Invest</button>
+                                                <button class="watchlistbtn">+Watchlist</button>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="para">
+                                                    <img src="https://cdn.rankmf.com/images/400035.jpg"
+                                                        alt="edelweiss-nifty-100-quality-30-index-fund-regular-plan-growth">
+                                                    <p>Edelweiss Nifty 100 Quality 30 index Fund plan - Growth </p>
+                                                </div>
+                                                <div class="btn3">
+                                                    <button class="equity1 equitybtn">Equity</button>
+                                                    <button class="equity1 indexbtn">Index Funds-Other</button>
+                                                    <button class="equity1 fundbtn">Index Funds-Other</button>
+                                                </div>
+                                            </td>
+                                            <td><i class="fa-solid fa-indian-rupee-sign"></i>11.31</td>
+                                            <td>13.75%</td>
+                                            <td>0.00%</td>
+                                            <td>0.00%</td>
+                                            <td>5.33%</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td class="star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(152, 173, 192);"></i>
+
+                                            </td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td><button class="investbtn">Invest</button>
+                                                <button class="watchlistbtn">+Watchlist</button>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="para">
+                                                    <img src="https://cdn.rankmf.com/images/400035.jpg"
+                                                        alt="edelweiss-nifty-100-quality-30-index-fund-regular-plan-growth">
+                                                    <p>Edelweiss Nifty 100 Quality 30 index Fund plan - Growth </p>
+                                                </div>
+                                                <div class="btn3">
+                                                    <button class="equity1 equitybtn">Equity</button>
+                                                    <button class="equity1 indexbtn">Index Funds-Other</button>
+                                                    <button class="equity1 fundbtn">Index Funds-Other</button>
+                                                </div>
+                                            </td>
+                                            <td><i class="fa-solid fa-indian-rupee-sign"></i>11.31</td>
+                                            <td>13.75%</td>
+                                            <td>0.00%</td>
+                                            <td>0.00%</td>
+                                            <td>5.33%</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td class="star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(152, 173, 192);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(152, 173, 192);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(152, 173, 192);"></i>
+
+                                            </td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td class="thumb"><i class="fa-sharp fa-solid fa-thumbs-up"></i></td>
+                                            <td><button class="investbtn">Invest</button>
+                                                <button class="watchlistbtn">+Watchlist</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!------Footer part here-->
+
+
+
+
+        <!--Social icons  -->
+        <div class="container-fluid">
+            <div class="social">
+                <i class="fa-brands fa-google-plus"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <hr />
+
+                <!-- Paragraph -->
+
+                <div class="para">
+                    <div class="para1">
+                        <p>
+                            <span class="head">Disclaimer:</span> Investments in Mutual Funds
+                            are subject to market risks. Please read all scheme related
+                            documents carefully before investing. Past performance is not an
+                            indicator of future returns. There is no guarantee of returns and
+                            investors confirm that neither guaranteed returns nor assured
+                            returns are being offered to them by RankMF or any of it’s employees
+                            or associates. Past performance may or may not be sustained in the
+                            future. Investors are advised to consult their own legal, tax and
+                            financial advisors to determine possible tax, legal and other
+                            financial implication or consequence of subscribing to SmartSIP
+                            order type. The data or figures mentioned on the RankMF shall not be
+                            construed as indicative yields/returns of any of the variants or
+                            products of RankMF or SmartSIP. SAMCO Securities Limited and SAMCO
+                            Ventures Pvt Limited. make no warranties or representations, express
+                            or implied, on products offered through the platform. It accepts no
+                            liability for any damages or losses, however caused, in connection
+                            with the use of, or on the reliance of its product or related
+                            services. RankMF is an Mutual fund order collection platform that is
+                            integrated with BSE StarMF. All orders collected and placed with BSE
+                            StarMF. Investors and clients agree that RankMF/SAMCO Securities
+                            Limited are not liable or responsible for and do not represent or
+                            warrant for any damages regarding non-execution or incorrect
+                            execution of orders with respect to the schemes selected by the
+                            clients, but not being limited to, any link/system failure,
+                            sufficient/insufficient funds in the trading account which may occur
+                            at the end of the client, RankMF/SAMCO Securities Limited or the
+                            exchange platform. Samco Securities Limited is Mutual Fund
+                            Distributor registered with AMFI (ARN -120121) SAMCO Ventures
+                            Private Limited - INA000013828 Registered Address: SAMCO Securities
+                            Limited, 1004 - A, 10th Floor, Naman Midtown - A Wing, Senapati
+                            Bapat Marg, Elphinstone Road, Mumbai - 400 013, Maharashtra, India.
+                        </p>
+                    </div>
+
+                    <div class="para2">
+                        <p>
+                            <span class="head"> Attention Investors:</span> "Prevent
+                            un-authorized transactions in your account --> Update your mobile
+                            numbers/email IDs with your stock brokers and depository
+                            participants. Receive information of your transactions directly from
+                            Exchange or Depository on your mobile/email at the end of the day.
+                            Issued in the interest of investors" "If the User provides with the
+                            e-mail address and phone number, the User agrees to receive periodic
+                            messages from RankMF, a Samco Securities Limited Brand with
+                            information on new products and services or upcoming events as it
+                            may deem fit." "KYC is one time exercise while dealing in securities
+                            markets - once KYC is done through a SEBI registered intermediary
+                            (broker, DP, Mutual Fund etc.), you need not undergo the same
+                            process again when you approach another intermediary." "No need to
+                            issue cheques by investors while subscribing to IPO. Just write the
+                            bank account number and sign in the application form to authorise
+                            your bank to make payment in case of allotment. No worries for
+                            refund as the money remains in investor's account." *All Information
+                            Contained On The Site Is For General Informational Use Only And
+                            Should Not Be Relied Upon By You In Making Any Investment Decision.
+                            The Site Does Not Provide Investment Advice And Nothing On The Site
+                            Should Be Construed As Being Investment Advice. Before Making Any
+                            Investment Choice You Should Always Consult A Fully Qualified
+                            Financial Adviser. * Although Rankmf And Samco Securities Limited
+                            Uses Its Reasonable Efforts To Ensure That Information On The Site
+                            Is Accurate And Complete, We Cannot Guarantee This To Be The Case.
+                            As A Result, Use Of The Site Is At Your Sole Risk And Rankmf And
+                            Samco Securities Cannot Accept Any Liability For Loss Or Damage
+                            Suffered By You Arising From Your Use Of Information Contained On
+                            The Site. You Should Take Adequate Steps To Verify The Accuracy And
+                            Completeness Of Any Information Contained On The Site.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="logo">
+                    <img width="250" height="35" src="https://cdn.rankmf.com/images/new-design/logo.png"
+                        alt="rankmf-logo" />
+                </div>
+
+                <div class="parag">
+                    <p>
+                        Copyright<i class="fa-regular fa-copyright"></i> 2023 Rank MF| All
+                        right reserved
+                    </p>
+                </div>
+                <div class="last">
+                    <h3>Knowldege Center</h3>
+                    <h3>Account Opening Status</h3>
+                    <h3>Why RankMF</h3>
+                    <h3>FAQ</h3>
+                    <h3>Privacy Policy</h3>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
