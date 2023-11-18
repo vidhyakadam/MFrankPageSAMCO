@@ -13,43 +13,41 @@
      overflow: none;
 
  }
+
  .main {
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(185, 44, 44, 0.1);
-    position: sticky;
+     background-color: #fff;
+     box-shadow: 0 4px 8px rgba(185, 44, 44, 0.1);
+     position: sticky;
      top: 0;
      overflow-x: hidden;
+ }
 
-
-}
-
-
- .navbar{
-    position: relative;
-    overflow-x: hidden;
-    top: 0;
+ .navbar {
+     position: relative;
+     overflow-x: hidden;
+     top: 0;
  }
 
  /* search box css */
 
- .heading{
-   color: #fff;
+ .heading {
+     color: #fff;
  }
- .marque{
-    text-align: center;
-    margin-top: 10px;
+
+ .marque {
+     text-align: center;
+     margin-top: 10px;
  }
- marquee , img{
-    height: 50px;
-    padding: 10px;
-    
+
+ marquee,
+ img {
+     height: 50px;
+     padding: 10px;
  }
  .searchcontainer {
-     width: 70%;
+     width: 100%;
      margin-top: 20px;
      box-shadow: 8 4px 8px #fff;
-
-
  }
 
  #search-box>.search {
@@ -81,61 +79,53 @@
      background-color: #438d23;
  }
 
- .sidebar{
+ .sidebar {
      margin-top: 20px;
      width: 25%;
      height: 93vh;
      color: black;
      background-color: white;
      transition: 0.5s;
-     padding-top: 60px;
+     padding-top: 20px;
      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-     top: 0;
-    left: -100%;
- } 
-
+ }
 
  .toggle-btn {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1;
-}
- 
- .assetbtn{
-    background-color: #25d6d6 !important;
-    color: #240b24 !important;
+     display: none;
+     font-size: 24px;
+     cursor: pointer;
+     position: fixed;
+     top: 20px;
+     left: 20px;
+     z-index: 1;
+ }
+
+ .assetbtn {
+     background-color: #25d6d6 !important;
+     color: #240b24 !important;
 
  }
- .popularbtn{
-    background-color: #25d6d6 !important;
-    color: #240b24 !important;
- }
- .ratingstarbtn{
-    background-color: #25d6d6 !important;
 
-    color:#fff !important;
+ .popularbtn {
+     background-color: #25d6d6 !important;
+     color: #240b24 !important;
+ }
+
+ .ratingstarbtn {
+     background-color: #25d6d6 !important;
+
+     color: #fff !important;
  }
 
  #table-mf {
-     width: 85%;
+     width: 100%;
      transition: all 0.5s ease-in-out;
  }
- .rate{
-    background-color: #25d6d6 !important;
+
+ .rate {
+     background-color: #25d6d6 !important;
 
  }
-
-
- /*      sidebar css and   media screen is here*/
-
-
-
- 
- 
 
  .container {
      box-shadow: 0 4px 8px rgba(185, 44, 44, 0.1);
@@ -161,7 +151,7 @@
      border-radius: 2px solid black;
      box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
          0 24px 46px rgba(220, 233, 255, 0.48);
-     
+
  }
 
 
@@ -191,7 +181,6 @@
      width: px;
  }
 
- 
 
  #tab {
      text-align: center;
@@ -331,8 +320,6 @@
      margin-top: 5px;
  }
 
- .col-left {}
-
  .fa-user {
      background-color: #a0b3a2;
      width: 30px;
@@ -342,7 +329,7 @@
      padding-top: 5px;
 
  }
- 
+
 
  .nav-link i {
      margin: 3px;
@@ -490,8 +477,6 @@
      }
  }
 
-
-
  /* // `lg` applies to medium devices (tablets, less than 992px) */
  @media (max-width: 991.98px) {
 
@@ -512,9 +497,9 @@
         z-index: 1;
     } */
 
-    .sidebar > .filter {
-        display: none;
-    }
+     .sidebar>.filter {
+         display: none;
+     }
 
      #table-mf {
          width: 100vw;
@@ -523,104 +508,91 @@
 
 
  @media screen and (max-width: 1000px) {
-   .rating-filter{
-    display: block;
+     .rating-filter {
+         display: block;
 
-   }
+     }
 
-}
 
-@media screen and (max-width: 600px) {
-    .sidebar {
-        width: 100%;
-    }
-    
-}
-          
-          
-          
-  /* Apply different styles for screens less than 900px */
-  @media screen and (max-width: 1000px) {
-    /* Set table rows to display as block for better stacking on small screens */
-    tr {
-        display: block;
-        margin-bottom: 10px;
-        box-sizing: border-box;
-        width: 100%;
-        
-    }
-    tr:hover{
+ }
 
-    }
+ @media screen and (min-width: 1000px) {
+     .sidebar {
+         overflow: scroll;
+     }
+ }
 
-    /* Hide table headers */
-    th {
-        display: none;
-    }
+ @media screen and (max-width: 600px) {
+     .sidebar {
+         width: 100%;
+     }
 
-    /* Style table data for small screens */
-    td {
-        display:block;
-        text-align: left;
-        box-sizing: border-box;
-        flex-direction: column;
+ }
+
+
+
+ /* Apply different styles for screens less than 900px */
+ @media screen and (max-width: 1000px) {
+
+     /* Set table rows to display as block for better stacking on small screens */
+     tr {
+         display: block;
+         margin-bottom: 10px;
+         box-sizing: border-box;
+         width: 100%;
+
+     }
+
+     tr:hover {}
+
+     /* Hide table headers */
+     th {
+         display: none;
+     }
+
+     /* Style table data for small screens */
+     td {
+         display: block;
+         text-align: left;
+         box-sizing: border-box;
+         flex-direction: column;
          width: 100%;
          border: none;
          border-radius: none;
-    }
-}
- 
-
-
-
-
-  @media (max-width: 355.98px) {
-    .main {
-
-
-    }
-  } 
-
-  /* // `sm` applies to x-small devices (portrait phones, less than 576px) */
-  @media (max-width: 575.98px) { 
-    .main {
-       
-    }
-
-   
+     }
  }
 
-/* // `md` applies to small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) { 
+ @media (max-width: 355.98px) {
+     .main {}
+ }
 
-    
+ /* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+ @media (max-width: 575.98px) {
+     .main {}
+
 
  }
 
-/* // `lg` applies to medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) { 
-    
-    /* .sidebar > .rating-filter > .filter-box {
+ /* // `md` applies to small devices (landscape phones, less than 768px) */
+ @media (max-width: 767.98px) {}
+
+ /* // `lg` applies to medium devices (tablets, less than 992px) */
+ @media (max-width: 991.98px) {
+
+     /* .sidebar > .rating-filter > .filter-box {
         display: flex;
         gap: 20px;
     } */
-    
-    .sidebar {
-        left: -100%;
-    }
 
-    .toggle-btn {
-        display: block;
-    }
-    
+     .sidebar {
+         left: -100%;
+     }
+
+     .toggle-btn {
+         display: block;
+     }
+
  }
 
-/* // `xl` applies to large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {
-    
-
-
-
-
-}
-
+ /* // `xl` applies to large devices (desktops, less than 1200px) */
+ @media (max-width: 1199.98px) {}
